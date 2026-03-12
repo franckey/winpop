@@ -1,5 +1,6 @@
 node_modules/
 dist/
 .userData/
+.claude/
 index.json
 *.log
