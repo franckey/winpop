@@ -1,5 +1,5 @@
 {
-  "name": "project-launcher",
+  "name": "winpop",
   "version": "1.0.0",
   "description": "Quick launcher to open projects in VS Code",
   "main": "main.js",
@@ -10,8 +10,8 @@
     "build:portable": "electron-builder --win portable"
   },
   "build": {
-    "appId": "com.franck.project-launcher",
-    "productName": "Project Launcher",
+    "appId": "com.franck.winpop",
+    "productName": "WinPop",
     "directories": {
       "output": "dist"
     },
@@ -37,7 +37,7 @@
       "oneClick": true,
       "perMachine": false,
       "allowToChangeInstallationDirectory": false,
-      "shortcutName": "Project Launcher"
+      "shortcutName": "WinPop"
     }
   },
   "dependencies": {},

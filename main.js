@@ -263,7 +263,7 @@ app.whenReady().then(() => {
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAEFJREFUOI1jYBhsgJGBgYGBgYHhPwMDA8N/BgYGRkYGBgYmBgYGBlIMMEEyDCLNACcoDCAOAGkGEKcZRALyDCAVAABn3gMRbFnPnwAAAABJRU5ErkJggg=="
   );
   tray = new Tray(icon);
-  tray.setToolTip("Project Launcher");
+  tray.setToolTip("WinPop");
   tray.setContextMenu(
     Menu.buildFromTemplate([
       { label: "Ouvrir", click: () => showWindow() },
