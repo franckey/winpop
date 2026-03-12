@@ -1,0 +1,17 @@
+{
+  "scanPaths": ["D:\\code"],
+  "maxDepth": 4,
+  "projectMarkers": [
+    ".git",
+    "package.json",
+    "Cargo.toml",
+    "pyproject.toml",
+    "go.mod",
+    ".sln",
+    "pom.xml",
+    ".vscode"
+  ],
+  "shortcut": "Ctrl+Alt+P",
+  "editor": "code",
+  "autoStart": true
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Launcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="search-container">
+        <div class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </div>
+        <input
+          type="text"
+          id="search"
+          placeholder="Rechercher un projet..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div class="shortcut-hint" id="shortcut-hint"></div>
+      </div>
+
+      <div id="results" class="results-container">
+        <div id="results-list"></div>
+      </div>
+
+      <div class="footer">
+        <span class="footer-hint"><kbd>↑↓</kbd> naviguer</span>
+        <span class="footer-hint"><kbd>Entrée</kbd> ouvrir dans VS Code</span>
+        <span class="footer-hint"><kbd>Ctrl+E</kbd> explorateur</span>
+        <span class="footer-hint"><kbd>Échap</kbd> fermer</span>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

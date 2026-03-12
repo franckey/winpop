@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(git *)",
+      "Bash(php *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(curl *)",
+      "Bash(gh *)",
+      "Bash(ls *)",
+      "Bash(cd *)",
+      "Bash(php -r \":*)",
+      "Bash(python3 -c \":*)",
+      "Bash(npx electron:*)",
+      "Bash(node -e \"console.log\\(require\\(''''electron/package.json''''\\).version\\)\")",
+      "Bash(node -e \"const electron = require\\(''electron''\\); console.log\\(typeof electron, Object.keys\\(electron\\)\\)\")",
+      "Bash(tasklist)",
+      "Bash(findstr -i electron)",
+      "Bash(node_modules/.bin/electron .)",
+      "Bash(node -e \"const p = require\\(''electron''\\); console.log\\(''path:'', p\\)\")",
+      "Bash(node_modules/electron/dist/electron.exe --version)",
+      "Bash(node_modules/electron/dist/electron.exe .)",
+      "Bash(node_modules/electron/dist/electron.exe -e \"console.log\\(JSON.stringify\\(process.versions\\)\\)\")",
+      "Bash(node_modules/electron/dist/electron.exe -e \"const e = require\\(''electron''\\); console.log\\(typeof e, typeof e.app\\)\")",
+      "Bash(cd /tmp)",
+      "Bash(\"c:/Users/franck/Desktop/launcher/node_modules/electron/dist/electron.exe\" -e \"const e = require\\(''electron''\\); console.log\\(typeof e, typeof e.app\\)\")",
+      "Bash(node_modules/electron/dist/electron.exe -e \":*)",
+      "Bash(mv node_modules/electron/index.js node_modules/electron/index.js.bak)",
+      "Bash(node_modules/electron/dist/electron.exe -e \"const e = require\\(''electron''\\); console.log\\(typeof e, typeof e.app, process.type\\)\")",
+      "Bash(mv node_modules/electron/index.js.bak node_modules/electron/index.js)",
+      "Bash(echo \"ELECTRON_RUN_AS_NODE=$ELECTRON_RUN_AS_NODE\")",
+      "Bash(env)",
+      "Bash(npm start:*)",
+      "Bash(ls -lh \"c:/Users/franck/Desktop/launcher/dist/\"*.exe)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\franck\\Desktop\\test-electron"
+    ]
+  }
+}

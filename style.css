@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: transparent;
+  color: #e0e0e0;
+  overflow: hidden;
+  -webkit-app-region: no-drag;
+  user-select: none;
+}
+
+#app {
+  background: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 480px;
+}
+
+/* Search bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  gap: 12px;
+}
+
+.search-icon {
+  color: #6c7086;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #cdd6f4;
+  font-size: 18px;
+  font-family: inherit;
+  caret-color: #89b4fa;
+}
+
+#search::placeholder {
+  color: #585b70;
+}
+
+.shortcut-hint {
+  color: #585b70;
+  font-size: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+kbd {
+  background: #313244;
+  border: 1px solid #45475a;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #a6adc8;
+}
+
+/* Results */
+.results-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #45475a transparent;
+}
+
+.results-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.results-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+  background: #45475a;
+  border-radius: 3px;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 12px;
+  transition: background 0.1s ease;
+}
+
+.result-item:hover,
+.result-item.selected {
+  background: #313244;
+}
+
+.result-item.selected {
+  background: #45475a;
+}
+
+.project-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.project-icon.node {
+  background: #1e3a2f;
+  color: #a6e3a1;
+}
+
+.project-icon.rust {
+  background: #3b2a1a;
+  color: #fab387;
+}
+
+.project-icon.python {
+  background: #1e2d3a;
+  color: #89b4fa;
+}
+
+.project-icon.go {
+  background: #1a3a3b;
+  color: #94e2d5;
+}
+
+.project-icon.dotnet {
+  background: #2d1e3a;
+  color: #cba6f7;
+}
+
+.project-icon.java {
+  background: #3a2a1e;
+  color: #f9e2af;
+}
+
+.project-icon.project {
+  background: #313244;
+  color: #a6adc8;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #cdd6f4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-name .highlight {
+  color: #89b4fa;
+  font-weight: 700;
+}
+
+.project-path {
+  font-size: 12px;
+  color: #6c7086;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.project-type-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #313244;
+  color: #a6adc8;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #585b70;
+}
+
+.empty-state .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #585b70;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 20px;
+  background: #181825;
+  border-top: 1px solid #313244;
+}
+
+.footer-hint {
+  font-size: 11px;
+  color: #585b70;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-item {
+  animation: fadeIn 0.15s ease;
+}
